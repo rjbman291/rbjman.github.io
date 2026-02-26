@@ -62,35 +62,32 @@
   "entry [] -I dont have enough entries to make it interesting",
   "entry [] - hopefully i add more",
   "entry [] - wagwan ig",
-  "entry [] - hey, is this me?",
+  "entry [] - hey, is this me?"
+	 ];
   //#endregion
-];
-		let nouns = [ "word", "animal", "key", "life", "book", "weapon", "rock", "person", "child", "jester", "liquid", "fate", "rodent", "goo", "solid", "front", "gas", "machine", "light", "event", "vehicle", "door", "entity", "storage", "food", "object", "city", "place", "country", "planet", "galaxy", "room", "equation", "building", "artifact", "creature", "qwerty", "reptile", "nothing", "all", "market", "dirt", "bird", "mammal", "fish", "plant", "air", "gang", "cloth", "line", "tablet", "ground", "money", "hand", "foot", "sport", "number", "mountain", "stick", "body", "meat", "circle", "ring", "power","poison"];
-		//body parts, direction
-		let adjectives = ["yellow","red","blue","green","black","white","purple","brown","orange","loving", "hating". "fearful","low", "small", "big", "great","female", "male", "filthy", "clean","good", "bad", "naughty", "evil", "windy", "calm", "celestial", "round", "bright", "cold", "hot", "new", "young", "old", "ancient", "slow", "fast", "ugly", "astethic", "foolish", "smart", "savage", "sharp", "though", "soft", "snotty", "loose", "empty", "full", "hungry", "local", "magic", "scaly", "busy", "free", "straight", "smelly", "flat", "rich", "poor", "active", "cloudy", "fleshy", "boney", "strong", "weak", "lazy"];
-		// not- version
-		let verbs = ["sleep","bite", "see","listen","feel", "think", "speak","wear","strip","shrink","grow","land","birth", "eat", "feed","hand","kick", "hit" ,"die","kill","fight", "hunt", "play", "count", "bump", "stick", "frame", "roll", "marrie", "come", "give", "open", "close", "begin", "go", "wait", "growl", "live", "flip", "cut", "throw", "joke", "run", "light", "insert", "poison", "
-		];
-		// can, use, 
-		let adverbs = ["","","","","","","","","","","","",];
-		let pronouns = ["I","you","he","she","it","we","they","who","whom","which","that"];
-		let prepositions = ["in","on","at","between","under","over","through","because","since","while"];
-		let conjections = ["and","but","or","for","nor","so","although","since","while","hence"];
-		let interjections = ["[INTERJECTION]","AH!","N-","OH NO!","mamma mia!"];
-		let articles = ["a","an","the", "la", "le"];
+	let nouns = [ "word", "animal", "key", "life", "book", "weapon", "rock", "person", "child", "jester", "liquid", "fate", "rodent", "goo", "solid", "front", "gas", "machine", "light", "event", "vehicle", "door", "entity", "storage", "food", "object", "city", "place", "country", "planet", "galaxy", "room", "equation", "building", "artifact", "creature", "qwerty", "reptile", "nothing", "all", "market", "dirt", "bird", "mammal", "fish", "plant", "air", "gang", "cloth", "line", "tablet", "ground", "money", "hand", "foot", "sport", "number", "mountain", "stick", "body", "meat", "circle", "ring", "power","poison"];
+	//body parts, direction
+	let adjectives = ["yellow","red","blue","green","black","white","purple","brown","orange","loving", "hating", "fearful","low", "small", "big", "great","female", "male", "filthy", "clean","good", "bad", "naughty", "evil", "windy", "calm", "celestial", "round", "bright", "cold", "hot", "new", "young", "old", "ancient", "slow", "fast", "ugly", "astethic", "foolish", "smart", "savage", "sharp", "though", "soft", "snotty", "loose", "empty", "full", "hungry", "local", "magic", "scaly", "busy", "free", "straight", "smelly", "flat", "rich", "poor", "active", "cloudy", "fleshy", "boney", "strong", "weak", "lazy"];
+	// not- version
+	let verbs = ["sleep","bite", "see","listen","feel", "think", "speak","wear","strip","shrink","grow","land","birth", "eat", "feed","hand","kick", "hit" ,"die","kill","fight", "hunt", "play", "count", "bump", "stick", "frame", "roll", "marrie", "come", "give", "open", "close", "begin", "go", "wait", "growl", "live", "flip", "cut", "throw", "joke", "run", "light", "insert", "poison" ];
+	// can, use, 
+	let adverbs = ["","","","","","","","","","","",""];
+	let pronouns = ["I","you","he","she","it","we","they","who","whom","which","that"];
+	let prepositions = ["in","on","at","between","under","over","through","because","since","while"];
+	let conjections = ["and","but","or","for","nor","so","although","since","while","hence"];
+	let interjections = ["[INTERJECTION]","AH!","N-","OH NO!","mamma mia!"];
+	let articles = ["a","an","the", "la", "le"];
+
+	window.onload = loadjoke();
+	function loadjoke()
+	 {
+		let i = Math.floor(Math.random() * jokes.length);
+		console.log(i);
+		document.getElementById("randsentence").innerHTML = jokes[i];
+	}
 
 
-
-        window.onload = loadjoke()
-       function loadjoke(){
-        let i = Math.floor(Math.random() * jokes.length)
-        console.log(i)
-        document.getElementById("randsentence").innerHTML = jokes[i];
-
-       }
-
-
-    var loop = setInterval(loop, 1000)
+    var loop = setInterval(loop, 1000);
     function loop()
     {
         var now = new Date();
@@ -98,5 +95,3 @@
         document.getElementById("datetime").innerHTML = datetime;
     }
   </script>
-
-
